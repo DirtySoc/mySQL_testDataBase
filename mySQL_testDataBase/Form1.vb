@@ -28,12 +28,18 @@ Public Class Form1
     Private Sub deleteButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles deleteButton.Click
         Dim userIsSure = MessageBox.Show("Are you sure you want to remove the selected from the database?", "caption", MessageBoxButtons.YesNo)
         If userIsSure = DialogResult.Yes Then
-            'Grab the selected user and split the sting into firstname and lastname.
-            Dim fullName As String = listBox_users.SelectedItem.ToString()
-            Dim name() As String = fullName.Split(" ")
-            'pass deleteUser the first name and last name of person getting deleted.
-            deleteUser(name(0), name(1))
-            getUserTableData()
+            'The program throws a null reference exception here sometimes if the user clicks onto the same name that is selected. Something buggy with the listbox....
+            Try
+                'Grab the selected user and split the sting into firstname and lastname.
+                Dim fullName As String = listBox_users.SelectedItem.ToString()
+                Dim name() As String = fullName.Split(" ")
+                'pass deleteUser the u_ID.
+                deleteUser(name(0))
+                'refresh the UI
+                getUserTableData()
+            Catch ex As Exception
+                MsgBox("Oops... Something went wrong. Try Again! " & ex.Message)
+            End Try
         Else
             Exit Sub
         End If
@@ -63,9 +69,8 @@ Public Class Form1
     ''' NOT WORKING 
     ''' Sub needs to be re-written to get u_id and then delete user based on id not name.
     ''' </remarks>
-    Private Sub deleteUser(ByVal firstName, ByVal lastName)
-        sql = "DELETE FROM _users WHERE u_firstname = '" & firstName & "' AND u_lastname = '" & lastName & "' LIMIT 1"
-        'MsgBox(sql)
+    Private Sub deleteUser(ByVal u_ID)
+        sql = "DELETE FROM _users WHERE u_ID = '" & u_ID & "' LIMIT 1"
         Try
             dbcomm = New MySqlCommand(sql, dbconn)
             dbcomm.ExecuteNonQuery()
@@ -82,7 +87,7 @@ Public Class Form1
             dbcomm = New MySqlCommand(sql, dbconn)
             dbread = dbcomm.ExecuteReader()
             While dbread.Read
-                listBox_users.Items.Add(dbread("u_firstName").ToString() & " " & dbread("u_lastName").ToString())
+                listBox_users.Items.Add(dbread("u_ID").ToString() & " " & dbread("u_firstName").ToString() & " " & dbread("u_lastName").ToString())
             End While
         Catch ex As Exception
             MsgBox("Problem loading data: " & ex.Message.ToString)

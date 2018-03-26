@@ -22,7 +22,7 @@ mySQL_testDataBase
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="M:mySQL_testDataBase.Form1.deleteUser(System.Object,System.Object)">
+<member name="M:mySQL_testDataBase.Form1.deleteUser(System.Object)">
  <summary>
  DELETE FROM test 
  WHERE u_firstname='Bob'
@@ -30,7 +30,7 @@ mySQL_testDataBase
  </summary>
  <remarks>
  NOT WORKING 
- Verified that SQL being sent is correct format. Tested command via cmd line interface to MariaDB...
+ Sub needs to be re-written to get u_id and then delete user based on id not name.
  </remarks>
 </member>
 </members>
