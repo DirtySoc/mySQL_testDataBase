@@ -1,0 +1,14 @@
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\bin\Debug\mySQL_testDataBase.exe
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\bin\Debug\mySQL_testDataBase.pdb
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\bin\Debug\mySQL_testDataBase.xml
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\bin\Debug\MySql.Data.dll
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\obj\Debug\mySQL_testDataBase.Form1.resources
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\obj\Debug\mySQL_testDataBase.Resources.resources
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\obj\Debug\mySQL_testDataBase.vbproj.GenerateResource.Cache
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\obj\Debug\mySQL_testDataBase.exe
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\obj\Debug\mySQL_testDataBase.xml
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\obj\Debug\mySQL_testDataBase.pdb
+T:\Derek\Visual Basic\mySQL_testDataBase\mySQL_testDataBase\obj\Debug\mySQL_testDataBase.vbprojResolveAssemblyReference.cache
+C:\Users\dwillingham\Source\Repos\mySQL_testDataBase\mySQL_testDataBase\obj\Debug\mySQL_testDataBase.exe
+C:\Users\dwillingham\Source\Repos\mySQL_testDataBase\mySQL_testDataBase\obj\Debug\mySQL_testDataBase.xml
+C:\Users\dwillingham\Source\Repos\mySQL_testDataBase\mySQL_testDataBase\obj\Debug\mySQL_testDataBase.pdb
