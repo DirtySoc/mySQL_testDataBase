@@ -18,7 +18,7 @@ Public Class Form1
     End Sub
 
     Private Sub saveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles saveButton.Click
-        addUser(txt_firstName.Text.ToString(), txt_lastName.Text.ToString())
+        addUser(txt_firstName.Text.ToString().Trim(), txt_lastName.Text.ToString().Trim())
     End Sub
 
     Private Sub getButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles getButton.Click
